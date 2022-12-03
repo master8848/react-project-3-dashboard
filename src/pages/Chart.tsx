@@ -1,25 +1,10 @@
-import React from "react";
-import {
-  GridComponent,
-  ColumnsDirective,
-  ColumnDirective,
-  Page,
-  Selection,
-  Inject,
-  Edit,
-  Toolbar,
-  Sort,
-  Filter,
-} from "@syncfusion/ej2-react-grids";
+import { chartLink } from "../data/dummy";
 
-import { customersData, customersGrid, chartLink } from "../data/dummy";
-import { Header } from "../components";
 import { NavLink, Outlet } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Charts = () => {
-  const { currentColor, activeMenu, setActiveMenu, screenSize } =
-    useStateContext();
+  const { currentColor } = useStateContext();
   const activeLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2";
   const normalLink =
